@@ -39,7 +39,7 @@ st.markdown("Predict the likelihood of a customer leaving based on their demogra
 
 @st.cache_resource
 def load_model():
-    return joblib.load(r"C:\Users\gurja\OneDrive\Desktop\Ml Start\ChurnApp\model.pkl")
+    return joblib.load("model.pkl")
 
 try:
     pipeline = load_model()
