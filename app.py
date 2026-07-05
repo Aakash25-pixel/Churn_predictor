@@ -43,9 +43,12 @@ def load_model():
 
 try:
     pipeline = load_model()
-except FileNotFoundError:
-    st.error("Model file not found. Please run the training script first to generate `model.pkl`.")
-    st.stop()
+except Exception as e:
+    st.warning("Model version mismatch or missing. Retraining automatically... please wait ~5 seconds.")
+    import train_model
+    st.cache_resource.clear()
+    pipeline = load_model()
+    st.success("Model retrained successfully for this environment!")
 
 # Layout
 st.sidebar.header("Customer Profile")

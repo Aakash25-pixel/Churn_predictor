@@ -13,7 +13,7 @@ import os
 
 # Load data
 print("Loading dataset...")
-df = pd.read_csv(r"C:\Users\gurja\OneDrive\Desktop\Ml Start\WA_Fn-UseC_-Telco-Customer-Churn.csv")
+df = pd.read_csv("WA_Fn-UseC_-Telco-Customer-Churn.csv")
 
 # Target encoding
 df['Churn'] = df['Churn'].map({'Yes': 1, 'No': 0})
@@ -71,7 +71,6 @@ roc = roc_auc_score(y_test, y_pred_proba)
 print(f"ROC AUC Score: {roc:.4f}")
 
 # Save the model
-model_path = r"C:\Users\gurja\OneDrive\Desktop\Ml Start\ChurnApp\model.pkl"
-os.makedirs(os.path.dirname(model_path), exist_ok=True)
+model_path = "model.pkl"
 joblib.dump(pipeline, model_path)
 print(f"Model saved to {model_path}")
