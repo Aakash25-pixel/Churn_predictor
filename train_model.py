@@ -65,6 +65,11 @@ print("Evaluating model...")
 y_pred = pipeline.predict(X_test)
 print(classification_report(y_test, y_pred))
 
+from sklearn.metrics import roc_auc_score
+y_pred_proba = pipeline.predict_proba(X_test)[:, 1]
+roc = roc_auc_score(y_test, y_pred_proba)
+print(f"ROC AUC Score: {roc:.4f}")
+
 # Save the model
 model_path = r"C:\Users\gurja\OneDrive\Desktop\Ml Start\ChurnApp\model.pkl"
 os.makedirs(os.path.dirname(model_path), exist_ok=True)
