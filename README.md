@@ -9,6 +9,16 @@ Customer churn is a critical metric for subscription-based businesses. This app 
 The underlying model is a **Random Forest Classifier** trained using **SMOTE** (Synthetic Minority Over-sampling Technique) to effectively handle class imbalance. 
 - **ROC AUC Score:** `0.8232` (82.3%)
 
+## 📊 Key Insights from EDA
+Our Exploratory Data Analysis (`EDA_Churn.ipynb`) uncovered several major drivers of customer churn:
+- **Contract & Tenure:** Customers on `Month-to-month` contracts churn at an extremely high rate (42.7%). The vast majority of churn occurs within the first 12 months (median tenure of churners is just 10 months).
+- **Service Type:** `Fiber optic` internet users have a high churn rate (41.9%), whereas DSL users are much more stable. Lack of add-ons (Tech Support, Online Security) also drastically increases churn probability.
+- **Financial Friction:** The `Electronic check` payment method sees a massive 45.3% churn rate, suggesting potential friction or dissatisfaction.
+- **Demographics:** Gender has no impact on churn, but customers *without* dependents or partners are twice as likely to leave.
+
+**High-Risk Customer Profile:**
+> A new customer (0-12 months tenure), single/without dependents, on a month-to-month contract, using Fiber Optic internet without tech support or online security, and paying via Electronic Check.
+
 ## 🛠️ Tech Stack
 - **Frontend UI:** Streamlit
 - **Machine Learning:** Scikit-Learn, Imbalanced-Learn
