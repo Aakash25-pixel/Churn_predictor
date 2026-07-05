@@ -1,6 +1,6 @@
 # 📡 Telco Customer Churn Predictor
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://churnpredictor-jxpgsusdz7jl4k68mz3xtr.streamlit.app/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://churnpredictor-yaikqgkibz5jdhgzvcmbp6.streamlit.app/)
 
 An interactive web application built with Python, Streamlit, and Machine Learning to predict the likelihood of a telecom customer churning (leaving the service). 
 
